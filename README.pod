@@ -1,0 +1,14 @@
+=pod
+
+Clone this repo
+
+	git clone https://github.com/n4kz/vimrc $HOME/.vim
+
+Create symbolic links in your home directory
+
+	ln -s $HOME/.vim/vimrc  $HOME/.vimrc
+	ln -s $HOME/.vim/gvimrc $HOME/.gvimrc
+
+Enjoy
+
+=cut
