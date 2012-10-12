@@ -20,3 +20,5 @@ hi PMenuThumb     guifg=NONE    guibg=#202020    gui=NONE
 hi PMenu          guifg=#99ff00 guibg=#202020
 hi PMenuSel       guifg=#99ff00 guibg=#444444
 hi PMenuSbar      guifg=#202020 guibg=#202020
+
+" vim: set filetype=vim :

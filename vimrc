@@ -15,7 +15,7 @@ if &t_Co >= 16
 	" Editable
 	hi Type         ctermfg=2    cterm=none         ctermbg=none      term=none
 	hi String       ctermfg=3    cterm=none         ctermbg=none      term=none
-    hi PreProc      ctermfg=4    cterm=bold         ctermbg=none      term=none
+	hi PreProc      ctermfg=4    cterm=bold         ctermbg=none      term=none
 	hi Include      ctermfg=4    cterm=underline,bold ctermbg=none    term=none
 	hi Constant     ctermfg=5    cterm=bold         ctermbg=none      term=none
 	hi Boolean      ctermfg=5    cterm=italic       ctermbg=none      term=none
