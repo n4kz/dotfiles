@@ -319,8 +319,8 @@ if has('autocmd')
 
 	augroup javascript
 		au!
-		au FileType javascript let g:javaScript_fold=1
-		au FileType javascript setlocal foldcolumn=2
+		"au FileType javascript let g:javaScript_fold=1
+		au FileType javascript setlocal foldcolumn=6
 	augroup end
 
 	" Use spaces instead of tabs on lj machines
