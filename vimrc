@@ -331,7 +331,7 @@ if has('autocmd')
 
 			" Remove i option
 			" to omit included files scan
-			au FileType perl setlocal complete='.,w,b,u,t'
+			au FileType perl setlocal complete=.,w,b,u,t
 		augroup end
 	endif
 
