@@ -302,16 +302,16 @@ if has('autocmd')
 		au FileType perl,c,cpp,javascript,ruby,sh,vim,tt2,tt2html,css nmap <buffer> <SPACE> za
 
 		" Highlight tabs
-		au FileType perl,c,cpp,javascript,ruby,sh,vim,tt2,tt2html,css,sql,tmpl,html.epl,html set list
-		au FileType perl,c,cpp,javascript,ruby,sh,vim,tt2,tt2html,css,sql,tmpl,html.epl,html set listchars=tab:\|\ 
+		au FileType perl,c,cpp,javascript,ruby,sh,vim,tt2,tt2html,css,sql,tmpl,html.epl,html,coffee setlocal list
+		au FileType perl,c,cpp,javascript,ruby,sh,vim,tt2,tt2html,css,sql,tmpl,html.epl,html,coffee setlocal listchars=tab:\|\ 
 
 		" Close brackets
 		au FileType perl,c,cpp,javascript,ruby,sh,sql,html.epl             imap <buffer> [ []<LEFT>
 		au FileType perl,c,cpp,javascript,ruby,sh,tt2,tt2html,sql,html.epl imap <buffer> { {}<LEFT>
 
 		" Turn on indent
-		au FileType perl,c,cpp,javascript,ruby,sh,html,vim,tex,css,html.epl setlocal autoindent
-		au FileType perl,c,cpp,javascript,ruby,sh,html                      setlocal smartindent
+		au FileType perl,c,cpp,javascript,ruby,sh,html,vim,tex,css,html.epl,coffee setlocal autoindent
+		au FileType perl,c,cpp,javascript,ruby,sh,html                             setlocal smartindent
 
 		" Compiler
 		au FileType perl,ruby,c,cpp,tex nmap <buffer> <F9> :make!<CR>
