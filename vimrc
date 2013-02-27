@@ -1,3 +1,6 @@
+" Enable syntax highlighting
+syntax on
+
 " User colors
 hi User1 cterm=bold ctermfg=4 guifg=#ffcc33 term=inverse,bold
 hi User2 cterm=bold ctermfg=2 guifg=#99bbff
@@ -84,6 +87,9 @@ else
 	hi VertSplit    term=none cterm=none ctermbg=none ctermfg=2
 endif
 
+" Enable modeline
+set modeline
+set modelines=5
 
 " Disable mouse
 set mouse=
