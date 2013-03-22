@@ -15,7 +15,7 @@ cd vim
 for url in $sources; do
 	folder=$(echo $url | sed -e 's/.*\///')-master
 
-	wget --no-check-certificate -O master.zip $url/archive/master.zip
+	curl -L -O $url/archive/master.zip
 
 	unzip -o master.zip
 	cp -rv $folder/* ./
