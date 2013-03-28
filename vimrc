@@ -267,7 +267,7 @@ if has('autocmd')
 		let perl_no_extended_vars=1
 		"let perl_want_scope_in_variables=1
 		"let perl_include_pod=1
-	    
+
 		augroup perl
 			au!
 			au FileType perl setlocal foldcolumn=5
@@ -275,7 +275,7 @@ if has('autocmd')
 			" Interpreter/debugger
 			au FileType perl compiler perl
 			au FileType perl setlocal makeprg=perl\ $*\ %
-			au FileType perl nmap <buffer> <F8> :make -cw<CR>
+			au FileType perl nmap <buffer> <F9> :make -cw<CR>
 
 			" Additional extensions
 			au BufEnter *.bml  set filetype=perl
@@ -301,26 +301,26 @@ if has('autocmd')
 		au FileType help nmap <buffer> <F1> <C-]>
 		au FileType help nmap <buffer> <F2> <C-T>
 	augroup end
-	
+
 	augroup main
 		au!
 		" Expand\collapse folds by space
 		au FileType perl,c,cpp,javascript,ruby,sh,vim,tt2,tt2html,css nmap <buffer> <SPACE> za
 
 		" Highlight tabs
-		au FileType perl,c,cpp,javascript,ruby,sh,vim,tt2,tt2html,css,sql,tmpl,html.epl,html,coffee setlocal list
-		au FileType perl,c,cpp,javascript,ruby,sh,vim,tt2,tt2html,css,sql,tmpl,html.epl,html,coffee setlocal listchars=tab:\|\ 
+		au FileType perl,c,cpp,javascript,ruby,sh,vim,tt2,tt2html,css,sql,tmpl,html.epl,html,coffee,python setlocal list
+		au FileType perl,c,cpp,javascript,ruby,sh,vim,tt2,tt2html,css,sql,tmpl,html.epl,html,coffee,python setlocal listchars=tab:\|\ 
 
 		" Close brackets
-		au FileType perl,c,cpp,javascript,ruby,sh,sql,html.epl             imap <buffer> [ []<LEFT>
-		au FileType perl,c,cpp,javascript,ruby,sh,tt2,tt2html,sql,html.epl imap <buffer> { {}<LEFT>
+		au FileType perl,c,cpp,javascript,ruby,sh,sql,html.epl,python             imap <buffer> [ []<LEFT>
+		au FileType perl,c,cpp,javascript,ruby,sh,tt2,tt2html,sql,html.epl,python imap <buffer> { {}<LEFT>
 
 		" Turn on indent
-		au FileType perl,c,cpp,javascript,ruby,sh,html,vim,tex,css,html.epl,coffee setlocal autoindent
-		au FileType perl,c,cpp,javascript,ruby,sh,html                             setlocal smartindent
+		au FileType perl,c,cpp,javascript,ruby,sh,html,vim,tex,css,html.epl,coffee,python setlocal autoindent
+		au FileType perl,c,cpp,javascript,ruby,sh,html,python                             setlocal smartindent
 
 		" Compiler
-		au FileType perl,ruby,c,cpp,tex nmap <buffer> <F9> :make!<CR>
+		au FileType ruby,c,cpp,tex nmap <buffer> <F9> :make!<CR>
 	augroup end
 
 	augroup javascript
