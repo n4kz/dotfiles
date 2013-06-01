@@ -87,9 +87,21 @@ else
 	hi VertSplit    term=none cterm=none ctermbg=none ctermfg=2
 endif
 
+" Special variables for perl syntax
+let perl_fold=1
+let perl_fold_blocks=1
+let perl_nofold_packages=1
+let perl_no_extended_vars=1
+"let perl_want_scope_in_variables=1
+let perl_include_pod=1
+
 " Enable modeline
 set modeline
 set modelines=5
+
+" Highlight tabs
+set list
+set listchars=tab:\|\ 
 
 " Disable mouse
 set mouse=
@@ -259,33 +271,23 @@ endfunction
 
 " Autocommands
 if has('autocmd')
-	if has('perl')
-		" Folds and syntax for perl files
-		let perl_fold=1
-		let perl_fold_blocks=1
-		let perl_nofold_packages=1
-		let perl_no_extended_vars=1
-		"let perl_want_scope_in_variables=1
-		"let perl_include_pod=1
+	augroup perl
+		au!
+		au FileType perl setlocal foldcolumn=5
 
-		augroup perl
-			au!
-			au FileType perl setlocal foldcolumn=5
+		" Interpreter/debugger
+		au FileType perl compiler perl
+		au FileType perl setlocal makeprg=perl\ $*\ %
+		au FileType perl nmap <buffer> <F9> :make -cw<CR>
 
-			" Interpreter/debugger
-			au FileType perl compiler perl
-			au FileType perl setlocal makeprg=perl\ $*\ %
-			au FileType perl nmap <buffer> <F9> :make -cw<CR>
+		" Additional extensions
+		au BufEnter *.bml  set filetype=perl
+		au BufEnter *.tmpl set filetype=tmpl
 
-			" Additional extensions
-			au BufEnter *.bml  set filetype=perl
-			au BufEnter *.tmpl set filetype=tmpl
-
-			" Docs
-			au FileType perl nmap <buffer> <F1> :call PerlDoc()<CR>:set nomod<CR>:set filetype=pod<CR><CR>
-			au FileType pod  nmap <buffer> <F1> :call PerlPod()<CR>:set nomod<CR>:set filetype=pod<CR>1G
-		augroup end
-	endif
+		" Docs
+		au FileType perl nmap <buffer> <F1> :call PerlDoc()<CR>:set nomod<CR>:set filetype=pod<CR><CR>
+		au FileType pod  nmap <buffer> <F1> :call PerlPod()<CR>:set nomod<CR>:set filetype=pod<CR>1G
+	augroup end
 
 	augroup vim
 		au!
@@ -307,10 +309,6 @@ if has('autocmd')
 		" Expand\collapse folds by space
 		au FileType perl,c,cpp,javascript,ruby,sh,vim,tt2,tt2html,css nmap <buffer> <SPACE> za
 
-		" Highlight tabs
-		au FileType perl,c,cpp,javascript,ruby,sh,vim,tt2,tt2html,css,sql,tmpl,html.epl,html,coffee,python setlocal list
-		au FileType perl,c,cpp,javascript,ruby,sh,vim,tt2,tt2html,css,sql,tmpl,html.epl,html,coffee,python setlocal listchars=tab:\|\ 
-
 		" Close brackets
 		au FileType perl,c,cpp,javascript,ruby,sh,sql,html.epl,python             imap <buffer> [ []<LEFT>
 		au FileType perl,c,cpp,javascript,ruby,sh,tt2,tt2html,sql,html.epl,python imap <buffer> { {}<LEFT>
@@ -328,18 +326,6 @@ if has('autocmd')
 		"au FileType javascript let g:javaScript_fold=1
 		au FileType javascript setlocal foldcolumn=6
 	augroup end
-
-	" Use spaces instead of tabs on lj machines
-	if hostname() =~ '^lj'
-		augroup expandtab
-			au!
-			au FileType perl setlocal expandtab
-
-			" Remove i option
-			" to omit included files scan
-			au FileType perl setlocal complete=.,w,b,u,t
-		augroup end
-	endif
 
 	augroup tex
 		au!
@@ -394,6 +380,10 @@ set showmode
 
 " Show line numbers
 set number
+
+" Remove i option
+" to omit included files scan for completion
+set complete=.,w,b,u,t
 
 if has('extra_search')
 	" Highlight search results
