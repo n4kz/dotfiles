@@ -1,0 +1,24 @@
+[submodule "vim/bundle/pathogen"]
+	path = vim/bundle/pathogen
+	url = https://github.com/tpope/vim-pathogen
+[submodule "vim/bundle/airline"]
+	path = vim/bundle/airline
+	url = https://github.com/bling/vim-airline
+[submodule "vim/bundle/json"]
+	path = vim/bundle/json
+	url = https://github.com/vim-scripts/vim-json-bundle
+[submodule "vim/bundle/markdown"]
+	path = vim/bundle/markdown
+	url = https://github.com/tpope/vim-markdown
+[submodule "vim/bundle/lighttpd"]
+	path = vim/bundle/lighttpd
+	url = https://github.com/vim-scripts/lighttpd-syntax
+[submodule "vim/bundle/gitgutter"]
+	path = vim/bundle/gitgutter
+	url = https://github.com/airblade/vim-gitgutter
+[submodule "vim/bundle/javascript"]
+	path = vim/bundle/javascript
+	url = https://github.com/vim-scripts/JavaScript-syntax
+[submodule "vim/bundle/less"]
+	path = vim/bundle/less
+	url = https://github.com/vim-scripts/vim-less

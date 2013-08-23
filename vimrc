@@ -1,135 +1,29 @@
 " Enable syntax highlighting
 syntax on
 
-" User colors
-hi User1 cterm=bold ctermfg=4 guifg=#ffcc33 term=inverse,bold
-hi User2 cterm=bold ctermfg=2 guifg=#99bbff
-hi User3 cterm=bold ctermfg=6 guifg=#99ff00
-hi User4 cterm=bold ctermfg=4 guifg=#ffcc33
-hi User5 cterm=bold ctermfg=2 guifg=#99bbff
-
-" Apply syntax highlight only if terminal has 16 colors
-if &t_Co >= 16 
-	hi User1 term=inverse,bold cterm=inverse,bold ctermfg=6
-	hi User2 cterm=bold ctermfg=10
-	hi User5 cterm=bold ctermfg=10
-	hi User4 cterm=none ctermfg=3
-
-	" Editable
-	hi Type         ctermfg=2    cterm=none         ctermbg=none      term=none
-	hi String       ctermfg=3    cterm=none         ctermbg=none      term=none
-	hi PreProc      ctermfg=4    cterm=bold         ctermbg=none      term=none
-	hi Include      ctermfg=4    cterm=underline,bold ctermbg=none    term=none
-	hi Constant     ctermfg=5    cterm=bold         ctermbg=none      term=none
-	hi Boolean      ctermfg=5    cterm=italic       ctermbg=none      term=none
-	hi Error        ctermfg=9    cterm=inverse,bold ctermbg=none      term=none
-	hi Todo         ctermfg=9    cterm=bold         ctermbg=none      term=none
-	hi Statement    ctermfg=10   cterm=bold         ctermbg=none      term=none
-	hi Operator     ctermfg=10   cterm=none         ctermbg=none      term=none
-	hi Comment      ctermfg=11   cterm=bold         ctermbg=none      term=none
-	hi Search       ctermfg=11   cterm=inverse      ctermbg=none      term=none
-	hi Float        ctermfg=12   cterm=bold         ctermbg=none      term=none
-	hi Character    ctermfg=12   cterm=bold         ctermbg=none      term=none
-	hi Label        ctermfg=13   cterm=bold         ctermbg=none      term=none
-	hi Special      ctermfg=13   cterm=none         ctermbg=none      term=none
-	hi Number       ctermfg=14   cterm=bold         ctermbg=none      term=none
-	hi Identifier   ctermfg=14   cterm=none         ctermbg=none      term=none
-	hi Visual       ctermfg=none cterm=none         ctermbg=4         term=none
-	hi Underlined   ctermfg=none cterm=underline    ctermbg=none      term=none
-
-	" Ex
-	hi Directory    ctermfg=10   cterm=bold         ctermbg=none      term=none
-
-	" Buffer separation
-	hi StatusLine   ctermfg=10   cterm=none         ctermbg=none      term=none
-	hi StatusLineNC ctermfg=12   cterm=none         ctermbg=none      term=none
-	hi VertSplit    ctermfg=3    cterm=none         ctermbg=none      term=none
-
-	" Menu elements
-	hi ModeMsg      ctermfg=14   cterm=bold         ctermbg=none      term=none
-	hi MoreMsg      ctermfg=14   cterm=bold         ctermbg=none      term=none
-	hi FoldColumn   ctermfg=14   cterm=none         ctermbg=none      term=none
-	hi Folded       ctermfg=14   cterm=none         ctermbg=none      term=none
-	hi PMenuSel     ctermfg=11   cterm=bold         ctermbg=none      term=none
-	hi PMenuSbar    ctermfg=11   cterm=none         ctermbg=none      term=none
-	hi LineNr       ctermfg=10   cterm=bold         ctermbg=none      term=none
-	hi WildMenu     ctermfg=10   cterm=bold         ctermbg=none      term=none
-	hi PMenuThumb   ctermfg=10   cterm=bold         ctermbg=none      term=none
-	hi PMenu        ctermfg=10   cterm=none         ctermbg=none      term=none
-	hi ErrorMsg     ctermfg=9    cterm=bold         ctermbg=none      term=none
-	hi WarningMsg   ctermfg=9    cterm=italic       ctermbg=none      term=none
-	hi SpecialKey   ctermfg=6    cterm=bold         ctermbg=none      term=none
-	hi Question     ctermfg=4    cterm=italic       ctermbg=none      term=none
-	hi Title        ctermfg=4    cterm=none         ctermbg=none      term=none
-
-	" Diff
-	hi DiffAdd      ctermfg=2    cterm=bold         ctermbg=none      term=none
-	hi DiffChange   ctermfg=none cterm=none         ctermbg=none      term=none
-	hi DiffDelete   ctermfg=1    cterm=bold         ctermbg=none      term=none
-	hi DiffText     ctermfg=none cterm=none         ctermbg=4         term=none
-
-	" Pgsql syntax fix
-	hi clear pgsqlOperator
-	hi clear perlOperator
-	hi link  pgsqlOperator Operator 
-	hi link  perlOperator  Operator 
-
-	" Html syntax fix
-	hi clear Underlined
-
-	" Misc
-	hi Include cterm=bold
-else
-	hi FoldColumn   term=none cterm=none ctermbg=none
-	hi Folded       term=none cterm=none ctermbg=none
-	hi StatusLine   term=none cterm=none ctermbg=none ctermfg=2
-	hi StatusLineNC term=none cterm=none ctermbg=none ctermfg=4
-	hi VertSplit    term=none cterm=none ctermbg=none ctermfg=2
-endif
+" Set colorscheme
+colorscheme desert
 
 " Special variables for perl syntax
 let perl_fold=1
 let perl_fold_blocks=1
 let perl_nofold_packages=1
 let perl_no_extended_vars=1
-"let perl_want_scope_in_variables=1
 let perl_include_pod=1
+"let perl_want_scope_in_variables=1
 
 " Enable modeline
 set modeline
-set modelines=5
 
 " Highlight tabs
 set list
-set listchars=tab:\|\ 
+set listchars=tab:\|\ ,trail:.
 
 " Disable mouse
 set mouse=
 
-" Last window has statusline only if there are at least two windows
-set laststatus=1
-
-" Full path to file
-set statusline=%3*%{RelPath()}%*%2*%f%*
-
-" File state flags
-set statusline+=%(\ %1*%m%w%r%y%*%)
-
-" Move following to right
-set statusline+=\ %=
-
-" Line and column numbers
-" set statusline+=\ \ %2*[%*%4*%l%*%2*,\ %*%4*%c%V%*%2*]%*
-
-" Position from start (in percents)
-set statusline+=\ %2*%P%*
-
-" Ruler
-set rulerformat=%50(%3*%{RelPath()}%*%5*%f%*%=%(\ %1*%m%w%r%y%*%)\ %2*%P%*%)
-set ruler
-
-" RegExp magic
-set magic
+" Show statusline always
+set laststatus=2
 
 " Show popup for completion variants
 set wildmenu
@@ -221,54 +115,6 @@ function! TabCmp()
 	endif
 endfunction
 
-" Tags completion
-function! TagCmp()
-	normal diw
-	let word = @
-	if word =~ '\v^(html|t?body|div|ul|li|d[ltd]|form|table|t[rdh]|h[1-6])$'
-		exe 'normal a<'. word . '></' . word . ">\<ESC>bbl"
-	elseif word =~ '^\v(img|br|input)$'
-		exe 'normal a<'. word . "/>\<ESC>h"
-	elseif word =~ '^\v(p)$'
-		exe 'normal a<'. word . ">\<ESC>"
-	else
-		normal u
-	endif
-endfunction
-
-" Get full path for statusline
-function! RelPath()
-	let l:full=expand("%:p")
-	let l:rel=expand("%")
-	let dir=getcwd()
-	if dir != l:rel && l:full =~ '\m^\V'. dir && dir !~ '\m^\~' && l:rel !~ '\m^/'
-		return dir.'/'
-	else
-		return ''
-	endif
-endfunction
-
-" Transform colors from #FFF and #FFFFFF to rgba(255, 255, 255, 1.0)
-function! Hex2rgb()
-	normal yiw
-	let l:s = @
-	let l:s = substitute(l:s, '\c\v +$', '', 'g')
-	echo strlen(l:s)
-
-	if strlen(l:s) == 3
-		let l:s = substitute(l:s, '\c\v([0-9A-F])', '\1\1', 'g')
-	elseif strlen(l:s) != 6
-		return ''
-	endif
-
-	normal bd2w
-
-	let l:r = '0x'. strpart(l:s, 0, 2)
-	let l:g = '0x'. strpart(l:s, 2, 2)
-	let l:b = '0x'. strpart(l:s, 4, 2)
-	return printf('rgba(%i, %i, %i, 1.0)', l:r, l:g, l:b)
-endfunction
-
 " Autocommands
 if has('autocmd')
 	augroup perl
@@ -331,25 +177,19 @@ if has('autocmd')
 		au!
 		au FileType tex setlocal foldcolumn=2
 		au FileType tex set makeprg=pdflatex\ $*\ %
-		au FileType tex nmap <buffer> <F3> :!evince %<.pdf <CR>
+		"au FileType tex nmap <buffer> <F8> :!evince %<.pdf <CR>
 	augroup end
 
 	augroup html
 		au!
 		au FileType tt2 set filetype=tt2html
-		au FileType tt2html,html,html.epl nmap <buffer> <F3> :call TagCmp()<CR>i
-		au FileType tt2html,html,html.epl imap <buffer> <F3> <ESC>:call TagCmp()<CR>i
 		au FileType html.epl imap <% <%= %><LEFT><LEFT><LEFT><SPACE>
 	augroup end
 
 	augroup css
 		au!
 		au FileType css inoremap <buffer> { {<CR><TAB><CR>}<ESC><<ka
-		" au FileType css inoremap <buffer> : :<SPACE>
-		" au FileType css inoremap <buffer> ; ;<CR>
 		au FileType css inoremap <buffer> , ,<SPACE>
-		au FileType css imap     <buffer> <F3>  <C-R>=Hex2rgb()<CR>
-		au FileType css nmap     <buffer> <F3> i<C-R>=Hex2rgb()<CR><ESC>
 	augroup end
 
 	augroup misc
@@ -374,12 +214,16 @@ endif
 " Do not replace tabs with spaces
 set noexpandtab
 
-" Show mode and commands
+" Show commands and mode
 set showcmd
 set showmode
 
+
 " Show line numbers
 set number
+
+" Keep two lines above and below cursor
+set scrolloff=2
 
 " Remove i option
 " to omit included files scan for completion
@@ -424,7 +268,7 @@ vmap <F2> <ESC>:w<CR>v
 nmap <F3> :nohlsearch<CR>
 
 " Toggle special characters visibility
-nmap <F8> :set invlist<CR>
+nmap <F4> :set invlist<CR>
 
 " Force quit
 nmap <F10> :q!<CR>
@@ -440,5 +284,58 @@ nmap <F12> :Ex<CR>
 
 " Smart tab
 inoremap <Tab> <C-R>=TabCmp()<CR>
+
+" Disabled airline extensions
+let g:airline#extensions#whitespace#enabled = 0
+let g:airline#extensions#hunks#enabled      = 0
+
+" Change gitgutter signs for removed lines
+let g:gitgutter_sign_removed          = '-'
+let g:gitgutter_sign_modified_removed = '='
+
+" One char modes
+let g:airline_mode_map = {
+\ '__' : '-',
+\ 'n'  : 'N',
+\ 'i'  : 'I',
+\ 'R'  : 'R',
+\ 'c'  : 'C',
+\ 'v'  : 'V',
+\ 'V'  : 'V',
+\ '' : 'V',
+\ 's'  : 'S',
+\ 'S'  : 'S',
+\ '' : 'S',
+\ }
+
+" Airline settings
+let g:airline_left_sep  = ''
+let g:airline_right_sep = ''
+let g:airline_section_b = '%{getcwd()}'
+let g:airline_section_c = '%t'
+let g:airline_section_y = '[%l, %c]'
+let g:airline_section_z = '%P'
+
+" Airline theme
+let g:airline_theme = 'bubblegum'
+
+" Load pathogen
+runtime bundle/pathogen/autoload/pathogen.vim
+
+" Init pathogen
+execute pathogen#infect()
+
+" Generate docs
+Helptags
+
+if get(g:, 'loaded_gitgutter')
+	highlight clear SignColumn
+	nmap <F8> :GitGutterToggle<CR>
+endif
+
+" Hide mode when airline loaded
+if get(g:, 'loaded_airline')
+	set noshowmode
+endif
 
 " vim: set filetype=vim :
