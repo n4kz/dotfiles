@@ -14,6 +14,7 @@ let perl_include_pod=1
 
 " Enable modeline
 set modeline
+set modelines=5
 
 " Highlight tabs
 set list
@@ -170,7 +171,7 @@ if has('autocmd')
 	augroup javascript
 		au!
 		"au FileType javascript let g:javaScript_fold=1
-		au FileType javascript setlocal foldcolumn=6
+		au FileType javascript setlocal foldcolumn=5
 	augroup end
 
 	augroup tex
@@ -196,6 +197,9 @@ if has('autocmd')
 		au!
 		au FileType xdefaults set makeprg=xrdb\ $*\ %
 		au FileType xdefaults nmap <buffer> <F9> :make!<CR><CR>
+
+		" Some syntax files override this setting
+		au BufEnter * setlocal tabstop=4
 	augroup end
 
 	augroup qfix
