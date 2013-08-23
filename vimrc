@@ -218,7 +218,6 @@ set noexpandtab
 set showcmd
 set showmode
 
-
 " Show line numbers
 set number
 
@@ -328,14 +327,7 @@ execute pathogen#infect()
 " Generate docs
 Helptags
 
-if get(g:, 'loaded_gitgutter')
-	highlight clear SignColumn
-	nmap <F8> :GitGutterToggle<CR>
-endif
-
-" Hide mode when airline loaded
-if get(g:, 'loaded_airline')
-	set noshowmode
-endif
+highlight clear SignColumn
+nmap <F8> :GitGutterToggle<CR>
 
 " vim: set filetype=vim :
