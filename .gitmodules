@@ -22,3 +22,6 @@
 [submodule "vim/bundle/less"]
 	path = vim/bundle/less
 	url = https://github.com/vim-scripts/vim-less
+[submodule "vim/bundle/css3"]
+	path = vim/bundle/css3
+	url = https://github.com/hail2u/vim-css3-syntax

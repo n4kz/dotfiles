@@ -5,12 +5,11 @@ syntax on
 colorscheme desert
 
 " Special variables for perl syntax
-let perl_fold=1
-let perl_fold_blocks=1
-let perl_nofold_packages=1
-let perl_no_extended_vars=1
-let perl_include_pod=1
-"let perl_want_scope_in_variables=1
+let perl_fold             = 1
+let perl_fold_blocks      = 1
+let perl_nofold_packages  = 1
+let perl_no_extended_vars = 1
+let perl_include_pod      = 1
 
 " Enable modeline
 set modeline
