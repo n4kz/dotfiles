@@ -19,9 +19,9 @@
 [submodule "vim/bundle/javascript"]
 	path = vim/bundle/javascript
 	url = https://github.com/vim-scripts/JavaScript-syntax
-[submodule "vim/bundle/less"]
-	path = vim/bundle/less
-	url = https://github.com/vim-scripts/vim-less
 [submodule "vim/bundle/css3"]
 	path = vim/bundle/css3
 	url = https://github.com/hail2u/vim-css3-syntax
+[submodule "vim/bundle/less"]
+	path = vim/bundle/less
+	url = https://github.com/groenewege/vim-less
