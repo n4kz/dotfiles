@@ -25,3 +25,6 @@
 [submodule "vim/bundle/less"]
 	path = vim/bundle/less
 	url = https://github.com/groenewege/vim-less
+[submodule "vim/bundle/coffee"]
+	path = vim/bundle/coffee
+	url = https://github.com/kchmck/vim-coffee-script
