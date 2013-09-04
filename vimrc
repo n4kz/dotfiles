@@ -228,6 +228,9 @@ set scrolloff=2
 " to omit included files scan for completion
 set complete=.,w,b,u,t
 
+" Fix backspace
+set backspace=indent,eol,start
+
 if has('extra_search')
 	" Highlight search results
 	set hlsearch
@@ -332,5 +335,8 @@ Helptags
 
 highlight clear SignColumn
 nmap <F8> :GitGutterToggle<CR>
+
+" Load overrides
+runtime vimrc.local
 
 " vim: set filetype=vim :
