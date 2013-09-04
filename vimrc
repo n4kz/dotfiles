@@ -1,9 +1,6 @@
 " Enable syntax highlighting
 syntax on
 
-" Set colorscheme
-colorscheme desert
-
 " Special variables for perl syntax
 let perl_fold             = 1
 let perl_fold_blocks      = 1
@@ -326,6 +323,9 @@ runtime bundle/pathogen/autoload/pathogen.vim
 
 " Init pathogen
 execute pathogen#infect()
+
+" Set colorscheme
+colorscheme wombat256mod
 
 " Generate docs
 Helptags
