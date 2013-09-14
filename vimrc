@@ -13,7 +13,6 @@ set modeline
 set modelines=5
 
 " Highlight tabs
-set list
 set listchars=tab:\|\ ,trail:.
 
 " Disable mouse
@@ -256,21 +255,23 @@ filetype plugin on
 filetype indent off
 
 " Move between windows
-nmap J <C-w>j
-nmap K <C-w>k
-nmap L <C-w>l
-nmap H <C-w>h
+nmap 'j <C-w>j
+nmap 'k <C-w>k
+nmap 'l <C-w>l
+nmap 'h <C-w>h
 
 " Fast save
 nmap <F2> :w<CR>
 imap <F2> <ESC>:w<CR>i
-vmap <F2> <ESC>:w<CR>v
 
 " Turn off search results highlight
 nmap <F3> :nohlsearch<CR>
 
 " Toggle special characters visibility
 nmap <F4> :set invlist<CR>
+
+" Toggle GitGutter
+nmap <F8> :GitGutterToggle<CR>
 
 " Force quit
 nmap <F10> :q!<CR>
@@ -292,8 +293,7 @@ let g:airline#extensions#whitespace#enabled = 0
 let g:airline#extensions#hunks#enabled      = 0
 
 " Change gitgutter signs for removed lines
-let g:gitgutter_sign_removed          = '-'
-let g:gitgutter_sign_modified_removed = '='
+let g:gitgutter_sign_modified_removed = '~̲'
 
 " One char modes
 let g:airline_mode_map = {
@@ -327,14 +327,8 @@ runtime bundle/pathogen/autoload/pathogen.vim
 " Init pathogen
 execute pathogen#infect()
 
-" Set colorscheme
-colorscheme wombat256mod
-
 " Generate docs
 Helptags
-
-highlight clear SignColumn
-nmap <F8> :GitGutterToggle<CR>
 
 " Load overrides
 runtime vimrc.local

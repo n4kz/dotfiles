@@ -28,6 +28,6 @@
 [submodule "vim/bundle/coffee"]
 	path = vim/bundle/coffee
 	url = https://github.com/kchmck/vim-coffee-script
-[submodule "vim/bundle/wombat256"]
-	path = vim/bundle/wombat256
-	url = https://github.com/vim-scripts/wombat256.vim
+[submodule "vim/bundle/solarized"]
+	path = vim/bundle/solarized
+	url = https://github.com/altercation/vim-colors-solarized
