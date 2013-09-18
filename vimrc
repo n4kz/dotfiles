@@ -2,11 +2,12 @@
 syntax on
 
 " Special variables for perl syntax
-let perl_fold             = 1
-let perl_fold_blocks      = 1
-let perl_nofold_packages  = 1
-let perl_no_extended_vars = 1
-let perl_include_pod      = 1
+let perl_fold                  = 1
+let perl_fold_blocks           = 1
+let perl_nofold_packages       = 1
+let perl_no_extended_vars      = 1
+let perl_include_pod           = 1
+let perl_no_scope_in_variables = 1
 
 " Enable modeline
 set modeline
@@ -293,7 +294,7 @@ let g:airline#extensions#whitespace#enabled = 0
 let g:airline#extensions#hunks#enabled      = 0
 
 " Change gitgutter signs for removed lines
-let g:gitgutter_sign_modified_removed = '~̲'
+let g:gitgutter_sign_modified_removed = '~'
 
 " One char modes
 let g:airline_mode_map = {
@@ -332,5 +333,18 @@ Helptags
 
 " Load overrides
 runtime vimrc.local
+
+" Fix solarized colorscheme
+if g:colors_name == 'solarized'
+	" Remove background
+	hi SignColumn ctermbg=none
+	hi FoldColumn ctermbg=none
+	hi LineNr     ctermbg=none
+	hi Folded     ctermbg=none cterm=bold
+
+	" Fix perl highlight
+	hi! link perlStatementFiledesc perlStatement
+	hi! link perlVarPlain          perlType
+endif
 
 " vim: set filetype=vim :
