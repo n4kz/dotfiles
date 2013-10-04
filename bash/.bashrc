@@ -1,3 +1,9 @@
+# Colorize grep output
+alias grep="grep --color=auto"
+
+# Enable colors
+export CLICOLOR=true
+
 # Add node_modules/.bin to PATH
 if [ -d $HOME/node_modules/.bin ]; then
 	export PATH="$HOME/node_modules/.bin:$PATH"
