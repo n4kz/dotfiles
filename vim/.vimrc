@@ -331,6 +331,11 @@ execute pathogen#infect()
 " Generate docs
 Helptags
 
+" Setup colorscheme
+let g:solarized_termcolors=256
+set background=dark
+colorscheme solarized
+
 " Load overrides
 runtime vimrc.local
 

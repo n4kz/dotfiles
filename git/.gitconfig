@@ -1,0 +1,11 @@
+[user]
+	name = n4kz
+	email = n4kz@n4kz.com
+[color]
+	ui = auto
+[alias]
+	st = status
+	ci = commit
+	co = checkout
+[branch]
+	autosetuprebase = always

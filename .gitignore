@@ -1,3 +1,4 @@
-vim/.*
-vim/vimrc.local
+.DS_Store
+vim/.vim/vimrc.local
 *.swp
+*.swo

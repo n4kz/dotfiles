@@ -1,39 +1,36 @@
-[submodule "vim/bundle/pathogen"]
-	path = vim/bundle/pathogen
+[submodule "vim/.vim/bundle/pathogen"]
+	path = vim/.vim/bundle/pathogen
 	url = https://github.com/tpope/vim-pathogen
-[submodule "vim/bundle/airline"]
-	path = vim/bundle/airline
+[submodule "vim/.vim/bundle/airline"]
+	path = vim/.vim/bundle/airline
 	url = https://github.com/bling/vim-airline
-[submodule "vim/bundle/json"]
-	path = vim/bundle/json
+[submodule "vim/.vim/bundle/json"]
+	path = vim/.vim/bundle/json
 	url = https://github.com/vim-scripts/vim-json-bundle
-[submodule "vim/bundle/markdown"]
-	path = vim/bundle/markdown
+[submodule "vim/.vim/bundle/markdown"]
+	path = vim/.vim/bundle/markdown
 	url = https://github.com/tpope/vim-markdown
-[submodule "vim/bundle/lighttpd"]
-	path = vim/bundle/lighttpd
-	url = https://github.com/vim-scripts/lighttpd-syntax
-[submodule "vim/bundle/gitgutter"]
-	path = vim/bundle/gitgutter
+[submodule "vim/.vim/bundle/gitgutter"]
+	path = vim/.vim/bundle/gitgutter
 	url = https://github.com/airblade/vim-gitgutter
-[submodule "vim/bundle/javascript"]
-	path = vim/bundle/javascript
+[submodule "vim/.vim/bundle/javascript"]
+	path = vim/.vim/bundle/javascript
 	url = https://github.com/vim-scripts/JavaScript-syntax
-[submodule "vim/bundle/css3"]
-	path = vim/bundle/css3
+[submodule "vim/.vim/bundle/css3"]
+	path = vim/.vim/bundle/css3
 	url = https://github.com/hail2u/vim-css3-syntax
-[submodule "vim/bundle/less"]
-	path = vim/bundle/less
+[submodule "vim/.vim/bundle/less"]
+	path = vim/.vim/bundle/less
 	url = https://github.com/groenewege/vim-less
-[submodule "vim/bundle/coffee"]
-	path = vim/bundle/coffee
+[submodule "vim/.vim/bundle/coffee"]
+	path = vim/.vim/bundle/coffee
 	url = https://github.com/kchmck/vim-coffee-script
-[submodule "vim/bundle/solarized"]
-	path = vim/bundle/solarized
+[submodule "vim/.vim/bundle/solarized"]
+	path = vim/.vim/bundle/solarized
 	url = https://github.com/altercation/vim-colors-solarized
-[submodule "vim/bundle/mustache"]
-	path = vim/bundle/mustache
-	url = git://github.com/juvenn/mustache.vim.git
-[submodule "vim/bundle/dwm"]
-	path = vim/bundle/dwm
+[submodule "vim/.vim/bundle/mustache"]
+	path = vim/.vim/bundle/mustache
+	url = https://github.com/juvenn/mustache.vim
+[submodule "vim/.vim/bundle/dwm"]
+	path = vim/.vim/bundle/dwm
 	url = https://github.com/n4kz/dwm.vim
