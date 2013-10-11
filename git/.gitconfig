@@ -11,3 +11,5 @@
 	autosetuprebase = always
 [push]
 	default = simple
+[core]
+	pager = less -x4
