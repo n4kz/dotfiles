@@ -320,7 +320,7 @@ let g:airline_section_y = '[%l, %c]'
 let g:airline_section_z = '%P'
 
 " Airline theme
-let g:airline_theme = 'bubblegum'
+let g:airline_theme = 'solarized'
 
 " Load pathogen
 runtime bundle/pathogen/autoload/pathogen.vim
@@ -332,8 +332,6 @@ execute pathogen#infect()
 Helptags
 
 " Setup colorscheme
-let g:solarized_termcolors=256
-set background=dark
 colorscheme solarized
 
 " Load overrides
