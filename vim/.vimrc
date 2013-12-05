@@ -271,9 +271,6 @@ nmap <F3> :nohlsearch<CR>
 " Toggle special characters visibility
 nmap <F4> :set invlist<CR>
 
-" Toggle GitGutter
-nmap <F8> :GitGutterToggle<CR>
-
 " Force quit
 nmap <F10> :q!<CR>
 imap <F10> <ESC>:q!<CR>
@@ -285,6 +282,12 @@ imap <F11> <ESC>:resize<CR>i
 
 " Ex
 nmap <F12> :Ex<CR>
+
+" Make
+nmap ;m :!make<CR>
+
+" Toggle GitGutter
+nmap ;g :GitGutterToggle<CR>
 
 " Smart tab
 inoremap <Tab> <C-R>=TabCmp()<CR>
