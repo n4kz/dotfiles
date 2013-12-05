@@ -30,7 +30,7 @@
 	url = https://github.com/juvenn/mustache.vim
 [submodule "vim/.vim/bundle/dwm"]
 	path = vim/.vim/bundle/dwm
-	url = https://github.com/n4kz/dwm.vim
+	url = https://github.com/spolu/dwm.vim
 [submodule "vim/.vim/bundle/javascript"]
 	path = vim/.vim/bundle/javascript
 	url = https://github.com/pangloss/vim-javascript
