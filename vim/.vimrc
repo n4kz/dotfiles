@@ -255,11 +255,6 @@ filetype on
 filetype plugin on
 filetype indent off
 
-" Move between windows
-nmap 'j <C-w>j
-nmap 'k <C-w>k
-nmap 'l <C-w>l
-nmap 'h <C-w>h
 
 " Fast save
 nmap <F2> :w<CR>
@@ -288,6 +283,13 @@ nmap ;m :!make<CR>
 
 " Toggle GitGutter
 nmap ;g :GitGutterToggle<CR>
+
+" Change active buffer (dwm)
+nmap ;; <C-Space>
+
+" Move between windows
+nmap ;j <C-j>j
+nmap ;k <C-k>k
 
 " Smart tab
 inoremap <Tab> <C-R>=TabCmp()<CR>
