@@ -336,6 +336,9 @@ execute pathogen#infect()
 " Generate docs
 Helptags
 
+" Dark colorscheme variant
+set background=dark
+
 " Setup colorscheme
 colorscheme solarized
 
