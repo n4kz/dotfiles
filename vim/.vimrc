@@ -123,10 +123,6 @@ if has('autocmd')
 		au FileType perl setlocal makeprg=perl\ $*\ %
 		au FileType perl nmap <buffer> <F9> :make -cw<CR>
 
-		" Additional extensions
-		au BufEnter *.bml  set filetype=perl
-		au BufEnter *.tmpl set filetype=tmpl
-
 		" Docs
 		au FileType perl nmap <buffer> <F1> :call PerlDoc()<CR>:set nomod<CR>:set filetype=pod<CR><CR>
 		au FileType pod  nmap <buffer> <F1> :call PerlPod()<CR>:set nomod<CR>:set filetype=pod<CR>1G
@@ -166,7 +162,6 @@ if has('autocmd')
 
 	augroup javascript
 		au!
-		"au FileType javascript let g:javaScript_fold=1
 		au FileType javascript setlocal foldcolumn=5
 	augroup end
 
@@ -174,7 +169,6 @@ if has('autocmd')
 		au!
 		au FileType tex setlocal foldcolumn=2
 		au FileType tex set makeprg=pdflatex\ $*\ %
-		"au FileType tex nmap <buffer> <F8> :!evince %<.pdf <CR>
 	augroup end
 
 	augroup html
@@ -191,18 +185,9 @@ if has('autocmd')
 
 	augroup misc
 		au!
-		au FileType xdefaults set makeprg=xrdb\ $*\ %
-		au FileType xdefaults nmap <buffer> <F9> :make!<CR><CR>
 
 		" Some syntax files override this setting
 		au BufEnter * setlocal tabstop=4
-	augroup end
-
-	augroup qfix
-		au!
-		au FileType qf nmap <buffer> <F5> :lnext<CR>
-		au FileType qf nmap <buffer> <F6> :lprevious<CR>
-		au FileType qf nmap <buffer> <F7> :lclose<CR>
 	augroup end
 endif
 
@@ -210,6 +195,9 @@ endif
 if has('title')
 	set title
 endif
+
+" Do not warn on shell command execution
+set nowarn
 
 " Do not replace tabs with spaces
 set noexpandtab
@@ -265,6 +253,11 @@ nmap <F3> :nohlsearch<CR>
 
 " Toggle special characters visibility
 nmap <F4> :set invlist<CR>
+
+" Commands for quickfix window
+nmap <F5> :cnext<CR>
+nmap <F6> :cprevious<CR>
+nmap <F7> :cclose<CR>
 
 " Force quit
 nmap <F10> :q!<CR>
