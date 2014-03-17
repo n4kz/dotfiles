@@ -243,7 +243,6 @@ filetype on
 filetype plugin on
 filetype indent off
 
-
 " Fast save
 nmap <F2> :w<CR>
 imap <F2> <ESC>:w<CR>i
@@ -255,9 +254,9 @@ nmap <F3> :nohlsearch<CR>
 nmap <F4> :set invlist<CR>
 
 " Commands for quickfix window
-nmap <F5> :cnext<CR>
-nmap <F6> :cprevious<CR>
-nmap <F7> :cclose<CR>
+nmap <F5> :cprevious<CR>
+nmap <F6> :cnext<CR>
+nmap <F7> :cwindow<CR>
 
 " Force quit
 nmap <F10> :q!<CR>
