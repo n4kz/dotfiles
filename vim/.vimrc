@@ -276,6 +276,12 @@ nmap ;m :!make<CR>
 " Toggle GitGutter
 nmap ;g :GitGutterToggle<CR>
 
+" Toggle paste mode
+nmap ;p :set invpaste<CR>
+
+" Toggle line numbers
+nmap ;n :set invnumber<CR>
+
 " Change active buffer (dwm)
 nmap ;; <C-Space>
 
