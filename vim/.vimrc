@@ -282,6 +282,9 @@ nmap ;p :set invpaste<CR>
 " Toggle line numbers
 nmap ;n :set invnumber<CR>
 
+" Toggle expandtab
+nmap ;e :set invexpandtab<CR>
+
 " Change active buffer (dwm)
 nmap ;; <C-Space>
 
