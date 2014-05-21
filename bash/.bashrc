@@ -1,6 +1,9 @@
 # Colorize grep output
 alias grep="grep --color=auto"
 
+# List open ports
+alias ports="lsof -i -P | grep -i listen"
+
 # Enable colors
 export CLICOLOR=true
 
