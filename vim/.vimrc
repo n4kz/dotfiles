@@ -157,7 +157,7 @@ if has('autocmd')
 		au FileType perl,c,cpp,javascript,ruby,sh,html,python                             setlocal smartindent
 
 		" Compiler
-		au FileType ruby,c,cpp,tex nmap <buffer> <F9> :make!<CR>
+		au FileType ruby,c,cpp,tex,coffee nmap <buffer> <F9> :make!<CR>
 	augroup end
 
 	augroup javascript
@@ -165,10 +165,15 @@ if has('autocmd')
 		au FileType javascript setlocal foldcolumn=5
 	augroup end
 
+	augroup coffee
+		au!
+		au FileType coffee setlocal makeprg=coffee\ $*\ %
+	augroup end
+
 	augroup tex
 		au!
 		au FileType tex setlocal foldcolumn=2
-		au FileType tex set makeprg=pdflatex\ $*\ %
+		au FileType tex setlocal makeprg=pdflatex\ $*\ %
 	augroup end
 
 	augroup html
