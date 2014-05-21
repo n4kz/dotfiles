@@ -5,8 +5,11 @@
 	ui = auto
 [alias]
 	st = status
+	ss = stash save
+	sp = stash pop
 	ci = commit
 	co = checkout
+	lo = log --graph --oneline
 [branch]
 	autosetuprebase = always
 [push]
