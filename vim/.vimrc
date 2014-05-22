@@ -290,6 +290,9 @@ nmap ;n :set invnumber<CR>
 " Toggle expandtab
 nmap ;e :set invexpandtab<CR>
 
+" Quit
+nmap ;q :q<CR>
+
 " Change active buffer (dwm)
 nmap ;; <C-Space>
 
