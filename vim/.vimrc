@@ -2,9 +2,6 @@
 syntax on
 
 " Special variables for perl syntax
-let perl_fold                  = 1
-let perl_fold_blocks           = 1
-let perl_nofold_packages       = 1
 let perl_no_extended_vars      = 1
 let perl_include_pod           = 1
 let perl_no_scope_in_variables = 1
@@ -28,16 +25,7 @@ set wildmenu
 " Do not try to be compatible
 set nocompatible
 
-" Fold code blocks
-set foldenable
-set foldmethod=syntax
-
-" Folding in vim files
-let g:vimsyn_folding='afp'
-"                     |||   Perl scripts
-"                     ||    Functions
-"                     |     Autocommands
-
+" Suppress vim syntax error highlighting
 let g:vimsyn_noerror=1
 
 " Help language
@@ -116,7 +104,6 @@ endfunction
 if has('autocmd')
 	augroup perl
 		au!
-		au FileType perl setlocal foldcolumn=5
 
 		" Interpreter/debugger
 		au FileType perl compiler perl
@@ -130,7 +117,6 @@ if has('autocmd')
 
 	augroup vim
 		au!
-		au FileType vim setlocal foldcolumn=2
 
 		" Search help by word under cursor
 		au FileType vim  nmap <buffer> <F1> :call VimDoc()<CR>:set nomod<CR>:set filetype=help<CR>
@@ -145,8 +131,6 @@ if has('autocmd')
 
 	augroup main
 		au!
-		" Expand\collapse folds by space
-		au FileType perl,c,cpp,javascript,ruby,sh,vim,tt2,tt2html,css nmap <buffer> <SPACE> za
 
 		" Close brackets
 		au FileType perl,c,cpp,javascript,ruby,sh,sql,html.epl,python             imap <buffer> [ []<LEFT>
@@ -160,11 +144,6 @@ if has('autocmd')
 		au FileType ruby,c,cpp,tex,coffee nmap <buffer> <F9> :make!<CR>
 	augroup end
 
-	augroup javascript
-		au!
-		au FileType javascript setlocal foldcolumn=5
-	augroup end
-
 	augroup coffee
 		au!
 		au FileType coffee setlocal makeprg=coffee\ $*\ %
@@ -172,7 +151,6 @@ if has('autocmd')
 
 	augroup tex
 		au!
-		au FileType tex setlocal foldcolumn=2
 		au FileType tex setlocal makeprg=pdflatex\ $*\ %
 	augroup end
 
