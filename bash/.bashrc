@@ -13,6 +13,9 @@ export HISTCONTROL=erasedups
 # Increase history size
 export HISTSIZE=20000
 
+# Set vim as default editor
+export EDITOR=vim
+
 # Append history on exit
 shopt -s histappend
 
