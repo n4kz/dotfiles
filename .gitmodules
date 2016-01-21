@@ -34,3 +34,6 @@
 [submodule "vim/.vim/bundle/javascript"]
 	path = vim/.vim/bundle/javascript
 	url = https://github.com/pangloss/vim-javascript
+[submodule "vim/.vim/bundle/lighttpd"]
+	path = vim/.vim/bundle/lighttpd
+	url = https://github.com/glensc/vim-syntax-lighttpd.git
