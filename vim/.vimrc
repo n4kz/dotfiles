@@ -314,6 +314,9 @@ let g:airline_section_z = '%P'
 " Airline theme
 let g:airline_theme = 'solarized'
 
+" JSDoc syntax for JavaScript
+let g:javascript_plugin_jsdoc = 1
+
 " Load pathogen
 runtime bundle/pathogen/autoload/pathogen.vim
 
