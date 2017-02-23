@@ -21,15 +21,32 @@ shopt -s histappend
 
 # Add node_modules/.bin to PATH
 if [ -d $HOME/node_modules/.bin ]
-	then export PATH="$HOME/node_modules/.bin:$PATH"
+	then
+	export PATH=$HOME/node_modules/.bin:$PATH
 fi
 
 # Add perl5/bin to PATH
 if [ -d $HOME/perl5/bin ]
-	then export PATH="$HOME/perl5/bin:$PATH"
+	then
+	export PATH=$HOME/perl5/bin:$PATH
+fi
+
+# Android SDK
+if [ -d $HOME/Library/Android/sdk ]
+	then
+	export ANDROID_HOME=$HOME/Library/Android/sdk
+	export PATH=$PATH:$ANDROID_HOME/tools
+	export PATH=$PATH:$ANDROID_HOME/platform-tools
+fi
+
+# Random binaries
+if [ -d $HOME/.bin ]
+	then
+	export PATH=$HOME/.bin:$PATH
 fi
 
 # Source local bashrc
 if [ -f $HOME/.bashrc.local ]
-	then source $HOME/.bashrc.local
+	then
+	source $HOME/.bashrc.local
 fi
