@@ -307,7 +307,7 @@ let g:airline_mode_map = {
 let g:airline_left_sep  = ''
 let g:airline_right_sep = ''
 let g:airline_section_b = '%{getcwd()}'
-let g:airline_section_c = '%t'
+let g:airline_section_c = '%f'
 let g:airline_section_y = '[%l, %c]'
 let g:airline_section_z = '%P'
 
