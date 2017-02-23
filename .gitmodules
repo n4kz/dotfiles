@@ -37,3 +37,6 @@
 [submodule "vim/.vim/bundle/lighttpd"]
 	path = vim/.vim/bundle/lighttpd
 	url = https://github.com/glensc/vim-syntax-lighttpd.git
+[submodule "vim/.vim/bundle/jsx"]
+	path = vim/.vim/bundle/jsx
+	url = https://github.com/mxw/vim-jsx.git

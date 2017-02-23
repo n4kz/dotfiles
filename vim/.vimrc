@@ -317,6 +317,12 @@ let g:airline_theme = 'solarized'
 " JSDoc syntax for JavaScript
 let g:javascript_plugin_jsdoc = 1
 
+" Flow syntax for JavaScript
+let g:javascript_plugin_flow = 1
+
+" Embedded JSX syntax for JavaScript
+let g:jsx_ext_required = 0
+
 " Load pathogen
 runtime bundle/pathogen/autoload/pathogen.vim
 
