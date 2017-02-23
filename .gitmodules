@@ -40,3 +40,6 @@
 [submodule "vim/.vim/bundle/jsx"]
 	path = vim/.vim/bundle/jsx
 	url = https://github.com/mxw/vim-jsx.git
+[submodule "vim/.vim/bundle/airline-themes"]
+	path = vim/.vim/bundle/airline-themes
+	url = https://github.com/vim-airline/vim-airline-themes
