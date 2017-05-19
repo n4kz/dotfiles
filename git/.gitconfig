@@ -10,6 +10,8 @@
 	ci = commit
 	co = checkout
 	lo = log --graph --oneline
+	df = diff
+	dc = diff --cached
 [branch]
 	autosetuprebase = always
 [push]
