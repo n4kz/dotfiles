@@ -18,3 +18,5 @@
 	default = simple
 [core]
 	pager = less -x4
+[credential]
+	helper = osxkeychain
