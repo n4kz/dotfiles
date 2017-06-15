@@ -13,30 +13,15 @@
 [submodule "vim/.vim/bundle/gitgutter"]
 	path = vim/.vim/bundle/gitgutter
 	url = https://github.com/airblade/vim-gitgutter
-[submodule "vim/.vim/bundle/css3"]
-	path = vim/.vim/bundle/css3
-	url = https://github.com/hail2u/vim-css3-syntax
-[submodule "vim/.vim/bundle/less"]
-	path = vim/.vim/bundle/less
-	url = https://github.com/groenewege/vim-less
-[submodule "vim/.vim/bundle/coffee"]
-	path = vim/.vim/bundle/coffee
-	url = https://github.com/kchmck/vim-coffee-script
 [submodule "vim/.vim/bundle/solarized"]
 	path = vim/.vim/bundle/solarized
 	url = https://github.com/altercation/vim-colors-solarized
-[submodule "vim/.vim/bundle/mustache"]
-	path = vim/.vim/bundle/mustache
-	url = https://github.com/juvenn/mustache.vim
 [submodule "vim/.vim/bundle/dwm"]
 	path = vim/.vim/bundle/dwm
 	url = https://github.com/spolu/dwm.vim
 [submodule "vim/.vim/bundle/javascript"]
 	path = vim/.vim/bundle/javascript
 	url = https://github.com/pangloss/vim-javascript
-[submodule "vim/.vim/bundle/lighttpd"]
-	path = vim/.vim/bundle/lighttpd
-	url = https://github.com/glensc/vim-syntax-lighttpd.git
 [submodule "vim/.vim/bundle/jsx"]
 	path = vim/.vim/bundle/jsx
 	url = https://github.com/mxw/vim-jsx.git
