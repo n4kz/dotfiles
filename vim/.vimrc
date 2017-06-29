@@ -131,10 +131,6 @@ if has('autocmd')
 	augroup main
 		au!
 
-		" Close brackets
-		au FileType perl,c,cpp,javascript,ruby,sh,sql,html.epl,python             imap <buffer> [ []<LEFT>
-		au FileType perl,c,cpp,javascript,ruby,sh,tt2,tt2html,sql,html.epl,python imap <buffer> { {}<LEFT>
-
 		" Compiler
 		au FileType ruby,c,cpp,tex,coffee nmap <buffer> <F9> :make!<CR>
 	augroup end
