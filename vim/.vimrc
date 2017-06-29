@@ -31,10 +31,9 @@ let g:vimsyn_noerror=1
 " Help language
 set helplang=en
 
-" Turn off indentation
-set noautoindent
-set nosmartindent
-set nocindent
+" Turn on indentation
+set autoindent
+set smartindent
 
 " Tab config
 set tabstop=4
@@ -135,10 +134,6 @@ if has('autocmd')
 		" Close brackets
 		au FileType perl,c,cpp,javascript,ruby,sh,sql,html.epl,python             imap <buffer> [ []<LEFT>
 		au FileType perl,c,cpp,javascript,ruby,sh,tt2,tt2html,sql,html.epl,python imap <buffer> { {}<LEFT>
-
-		" Turn on indent
-		au FileType perl,c,cpp,javascript,ruby,sh,html,vim,tex,css,html.epl,coffee,python setlocal autoindent
-		au FileType perl,c,cpp,javascript,ruby,sh,html,python                             setlocal smartindent
 
 		" Compiler
 		au FileType ruby,c,cpp,tex,coffee nmap <buffer> <F9> :make!<CR>
