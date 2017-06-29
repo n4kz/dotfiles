@@ -1,11 +1,6 @@
 " Enable syntax highlighting
 syntax on
 
-" Special variables for perl syntax
-let perl_no_extended_vars      = 1
-let perl_include_pod           = 1
-let perl_no_scope_in_variables = 1
-
 " Enable modeline
 set modeline
 set modelines=5
@@ -24,9 +19,6 @@ set wildmenu
 
 " Do not try to be compatible
 set nocompatible
-
-" Suppress vim syntax error highlighting
-let g:vimsyn_noerror=1
 
 " Help language
 set helplang=en
@@ -272,6 +264,9 @@ nmap ;k <C-k>k
 " Smart tab
 inoremap <Tab> <C-R>=TabCmp()<CR>
 
+" Suppress vim syntax error highlighting
+let g:vimsyn_noerror=1
+
 " Disabled airline extensions
 let g:airline#extensions#whitespace#enabled = 0
 let g:airline#extensions#hunks#enabled      = 0
@@ -313,6 +308,11 @@ let g:javascript_plugin_flow = 1
 
 " Embedded JSX syntax for JavaScript
 let g:jsx_ext_required = 0
+
+" Special variables for perl syntax
+let perl_no_extended_vars      = 1
+let perl_include_pod           = 1
+let perl_no_scope_in_variables = 1
 
 " Load pathogen
 runtime bundle/pathogen/autoload/pathogen.vim
