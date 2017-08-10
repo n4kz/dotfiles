@@ -44,6 +44,11 @@ if [ -d $HOME/Library/Android/sdk ]; then
 	export PATH=$PATH:$ANDROID_HOME/platform-tools
 fi
 
+# Ruby env
+if which rbenv &> /dev/null; then
+	eval "$(rbenv init -)"
+fi
+
 # Random binaries
 if [ -d $HOME/.bin ]; then
 	export PATH=$HOME/.bin:$PATH
