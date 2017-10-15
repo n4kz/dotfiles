@@ -1,0 +1,1 @@
+OPTIONS=color, norest_on_space, time, showexp, boulder:0, pickup_types:?!/+="$, male, name=Bane, race=human, role=rogue, pettype=cat, catname=Jirra
