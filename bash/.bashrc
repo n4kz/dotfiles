@@ -44,6 +44,11 @@ if [ -d $HOME/Library/Android/sdk ]; then
 	export PATH=$PATH:$ANDROID_HOME/platform-tools
 fi
 
+# Homebrew
+if [ -d $HOME/homebrew ]; then
+	export PATH=$PATH:$HOME/homebrew/bin
+fi
+
 # Ruby env
 if which rbenv &> /dev/null; then
 	eval "$(rbenv init -)"
