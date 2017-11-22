@@ -257,10 +257,6 @@ nmap ;q :q<CR>
 " Change active buffer (dwm)
 nmap ;; <C-Space>
 
-" Move between windows
-nmap ;j <C-j>j
-nmap ;k <C-k>k
-
 " Smart tab
 inoremap <Tab> <C-R>=TabCmp()<CR>
 
