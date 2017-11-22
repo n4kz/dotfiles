@@ -251,6 +251,15 @@ nmap ;n :set invnumber<CR>
 " Toggle expandtab
 nmap ;e :set invexpandtab<CR>
 
+" Toggle hlsearch
+nmap ;h :set invhlsearch<CR>
+
+" Resize buffer
+nmap ;r :resize<CR>
+
+" Save
+nmap ;s :w<CR>
+
 " Quit
 nmap ;q :q<CR>
 
