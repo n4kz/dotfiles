@@ -19,14 +19,9 @@ export EDITOR=vim
 # Append history on exit
 shopt -s histappend
 
-# Add node_modules/.bin to PATH
-if [ -d $HOME/node_modules/.bin ]; then
-	export PATH=$HOME/node_modules/.bin:$PATH
-fi
-
 # Add perl5/bin to PATH
 if [ -d $HOME/perl5/bin ]; then
-	export PATH=$HOME/perl5/bin:$PATH
+	export PATH=$PATH:$HOME/perl5/bin
 fi
 
 # Add perl-specific variables to PATH
@@ -47,6 +42,11 @@ fi
 # Homebrew
 if [ -d $HOME/homebrew ]; then
 	export PATH=$PATH:$HOME/homebrew/bin
+fi
+
+# Add node_modules/.bin to PATH
+if [ -d $HOME/node_modules/.bin ]; then
+	export PATH=$PATH:$HOME/node_modules/.bin
 fi
 
 # Ruby env
