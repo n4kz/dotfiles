@@ -59,6 +59,11 @@ if [ -d $HOME/.bin ]; then
 	export PATH=$HOME/.bin:$PATH
 fi
 
+# Torsocks configuration file
+if [ -f $HOME/.torsocks.conf ]; then
+	export TORSOCKS_CONF_FILE=$HOME/.torsocks.conf
+fi
+
 # Source local bashrc
 if [ -f $HOME/.bashrc.local ]; then
 	source $HOME/.bashrc.local
