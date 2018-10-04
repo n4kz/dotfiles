@@ -137,18 +137,6 @@ if has('autocmd')
 		au FileType tex setlocal makeprg=pdflatex\ $*\ %
 	augroup end
 
-	augroup html
-		au!
-		au FileType tt2 set filetype=tt2html
-		au FileType html.epl imap <% <%= %><LEFT><LEFT><LEFT><SPACE>
-	augroup end
-
-	augroup css
-		au!
-		au FileType css inoremap <buffer> { {<CR><TAB><CR>}<ESC><<ka
-		au FileType css inoremap <buffer> , ,<SPACE>
-	augroup end
-
 	augroup misc
 		au!
 
