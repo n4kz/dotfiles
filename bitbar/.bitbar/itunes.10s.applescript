@@ -19,6 +19,6 @@ on run argv
 			end timeout
 		end tell
 	on error message
-		return message
+		return ""
 	end try
 end run
