@@ -44,13 +44,18 @@ if [ -d $HOME/homebrew ]; then
 	export PATH=$PATH:$HOME/homebrew/bin
 fi
 
-# Add node_modules/.bin to PATH
+# NPM
 if [ -d $HOME/node_modules/.bin ]; then
 	export PATH=$PATH:$HOME/node_modules/.bin
 fi
 
+# Yarn
+if which -s yarn; then
+	export PATH=$PATH:$(yarn global bin)
+fi
+
 # Ruby env
-if which rbenv &> /dev/null; then
+if which -s rbenv; then
 	eval "$(rbenv init -)"
 fi
 
