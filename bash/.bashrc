@@ -4,8 +4,12 @@ alias grep="grep --color=auto"
 # List open ports
 alias ports="lsof -i -P | grep -i listen"
 
-# Enable colors
-export CLICOLOR=true
+# Colorize ls output
+if [ $(uname) == Darwin ]; then
+	export CLICOLOR=true
+else
+	alias ls="ls --color=auto"
+fi
 
 # Remove dups from history
 export HISTCONTROL=erasedups
