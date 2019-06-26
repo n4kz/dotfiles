@@ -54,12 +54,12 @@ if [ -d $HOME/node_modules/.bin ]; then
 fi
 
 # Yarn
-if which -s yarn; then
+if which yarn &> /dev/null; then
 	export PATH=$PATH:$(yarn global bin)
 fi
 
 # Ruby env
-if which -s rbenv; then
+if which rbenv &> /dev/null; then
 	eval "$(rbenv init -)"
 fi
 
