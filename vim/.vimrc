@@ -28,8 +28,8 @@ set autoindent
 set smartindent
 
 " Tab config
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 
 " View perldoc in new window
 function! PerlDoc()
@@ -120,28 +120,12 @@ if has('autocmd')
 		au FileType help nmap <buffer> <F2> <C-T>
 	augroup end
 
-	augroup main
+	augroup tabs
 		au!
 
-		" Compiler
-		au FileType ruby,c,cpp,tex,coffee nmap <buffer> <F9> :make!<CR>
-	augroup end
-
-	augroup coffee
-		au!
-		au FileType coffee setlocal makeprg=coffee\ $*\ %
-	augroup end
-
-	augroup tex
-		au!
-		au FileType tex setlocal makeprg=pdflatex\ $*\ %
-	augroup end
-
-	augroup misc
-		au!
-
-		" Some syntax files override this setting
-		au BufEnter * setlocal tabstop=4
+		au FileType vim,help,make,sh,perl set noexpandtab
+		au FileType vim,help,make,sh,perl set tabstop=4
+		au FileType vim,help,make,sh,perl set shiftwidth=4
 	augroup end
 endif
 
@@ -153,8 +137,8 @@ endif
 " Do not warn on shell command execution
 set nowarn
 
-" Do not replace tabs with spaces
-set noexpandtab
+" Replace tabs with spaces
+set expandtab
 
 " Show commands and mode
 set showcmd
