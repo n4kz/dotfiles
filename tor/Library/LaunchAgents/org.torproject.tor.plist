@@ -7,9 +7,11 @@
     <key>ProgramArguments</key>
     <array>
     <string>/opt/local/bin/tor</string>
+    <string>-f</string>
+    <string>~/.torrc</string>
     </array>
     <key>RunAtLoad</key>
-    <true/>
+    <false/>
     <key>GroupName</key>
     <string>daemon</string>
 </dict>
