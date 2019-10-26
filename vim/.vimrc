@@ -229,6 +229,9 @@ nmap ;h :set invhlsearch<CR>
 " Resize buffer
 nmap ;r :resize<CR>
 
+" Open file in same directory
+nmap ;f :new <C-R>=expand("%:h")."/"<CR>
+
 " Save
 nmap ;s :w<CR>
 
