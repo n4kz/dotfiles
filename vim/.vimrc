@@ -241,6 +241,12 @@ nmap ;q :q<CR>
 " Change active buffer (dwm)
 nmap ;; <C-Space>
 
+" Next entry
+nmap ;j :edit `ENTRY=% journal next`<CR>
+
+" Prev entry
+nmap ;k :edit `ENTRY=% journal prev`<CR>
+
 " Smart tab
 inoremap <Tab> <C-R>=TabCmp()<CR>
 
