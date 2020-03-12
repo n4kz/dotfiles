@@ -1,11 +1,17 @@
 #!/bin/bash
 
+function endpoint {
+	echo -n "https://iss.moex.com"
+	echo -n "/iss/engines/currency/markets/selt/boards/CETS/securities/$1.json"
+}
+
+function fetch {
+	echo -n $(curl -s $(endpoint $1) | jq '.marketdata.data[0][8]')
+}
+
 set -e
 set -o pipefail
 
 source $HOME/.profile
 
-DATA=$(curl -s https://www.banki.ru/products/currency/ajax/informer/data/ | jq '.moex[] | .value')
-RATE=( $DATA )
-
-printf "%.2f %.2f" ${RATE[0]} ${RATE[1]}
+printf '%.2f %.2f' $(fetch USD000UTSTOM) $(fetch EUR_RUB__TOM)
