@@ -15,7 +15,7 @@ fi
 export HISTCONTROL=erasedups
 
 # Increase history size
-export HISTSIZE=20000
+export HISTSIZE=250000
 
 # Set vim as default editor
 export EDITOR=vim
