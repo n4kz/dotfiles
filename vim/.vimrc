@@ -147,6 +147,9 @@ set showmode
 " Show line numbers
 set number
 
+" Highlight cursor line
+set cursorline
+
 " Keep two lines above and below cursor
 set scrolloff=2
 
@@ -330,6 +333,9 @@ if g:colors_name == 'solarized'
 	hi GitGutterAdd    ctermbg=none
 	hi GitGutterChange ctermbg=none
 	hi GitGutterDelete ctermbg=none
+
+	hi CursorLine   ctermbg=none
+	hi CursorLineNr ctermbg=none cterm=bold
 
 	" Fix perl highlight
 	hi! link perlStatementFiledesc perlStatement
