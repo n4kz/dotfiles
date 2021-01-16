@@ -254,8 +254,9 @@ inoremap <Tab> <C-R>=TabCmp()<CR>
 let g:vimsyn_noerror=1
 
 " Disabled airline extensions
-let g:airline#extensions#whitespace#enabled = 0
-let g:airline#extensions#hunks#enabled      = 0
+let g:airline#extensions#whitespace#enabled  = 0
+let g:airline#extensions#hunks#enabled       = 0
+let g:airline#extensions#searchcount#enabled = 0
 
 " Change gitgutter signs for removed lines
 let g:gitgutter_sign_modified_removed = '~'
