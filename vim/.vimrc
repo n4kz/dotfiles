@@ -327,6 +327,10 @@ if g:colors_name == 'solarized'
 	hi LineNr     ctermbg=none
 	hi Folded     ctermbg=none cterm=bold
 
+	hi GitGutterAdd    ctermbg=none
+	hi GitGutterChange ctermbg=none
+	hi GitGutterDelete ctermbg=none
+
 	" Fix perl highlight
 	hi! link perlStatementFiledesc perlStatement
 	hi! link perlVarPlain          perlType
