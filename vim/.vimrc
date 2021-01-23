@@ -31,6 +31,20 @@ set smartindent
 set tabstop=2
 set shiftwidth=2
 
+" Set line break string
+execute 'set' 'showbreak=~>\ '
+
+" Display line break in line number column
+set cpoptions+=n
+
+if has('linebreak')
+	" Indent wrapped lines
+	set breakindent
+
+	" Adjust indentation by break string width
+	set breakindentopt=shift:-3
+endif
+
 " View perldoc in new window
 function! PerlDoc()
 	normal yy
@@ -340,6 +354,9 @@ if g:colors_name == 'solarized'
 	" Fix perl highlight
 	hi! link perlStatementFiledesc perlStatement
 	hi! link perlVarPlain          perlType
+
+	" Fix line break highlight
+	hi! link NonText LineNr
 endif
 
 " vim: set filetype=vim :
