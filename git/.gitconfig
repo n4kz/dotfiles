@@ -20,3 +20,5 @@
 	pager = less -x4
 [credential]
 	helper = osxkeychain
+[init]
+  defaultBranch = master
