@@ -11,6 +11,11 @@ else
 	alias ls="ls --color=auto"
 fi
 
+# Do not warn about zsh
+if [ $(uname) == Darwin ]; then
+	export BASH_SILENCE_DEPRECATION_WARNING=1
+fi
+
 # Remove dups from history
 export HISTCONTROL=erasedups
 
