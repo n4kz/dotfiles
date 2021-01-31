@@ -1,12 +1,12 @@
 #!/usr/bin/env osascript
 
 on run argv
-	if application "iTunes" is not running then
+	if application "Music" is not running then
 		return ""
 	end if
 
 	try
-		tell application "iTunes"
+		tell application "Music"
 			with timeout of 2 seconds
 				if player state is playing then
 					set currentTrack to name of current track as string
