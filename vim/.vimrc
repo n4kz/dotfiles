@@ -137,9 +137,9 @@ if has('autocmd')
 	augroup tabs
 		au!
 
-		au FileType vim,help,make,sh,perl set noexpandtab
-		au FileType vim,help,make,sh,perl set tabstop=4
-		au FileType vim,help,make,sh,perl set shiftwidth=4
+		au FileType vim,help,make,sh,sshconfig,perl set noexpandtab
+		au FileType vim,help,make,sh,sshconfig,perl set tabstop=4
+		au FileType vim,help,make,sh,sshconfig,perl set shiftwidth=4
 	augroup end
 endif
 
