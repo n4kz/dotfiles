@@ -16,6 +16,11 @@ if [ $(uname) == Darwin ]; then
 	export BASH_SILENCE_DEPRECATION_WARNING=1
 fi
 
+# Set java home
+if [ $(uname) == Darwin ]; then
+	export JAVA_HOME=$(/usr/libexec/java_home)
+fi
+
 # Remove dups from history
 export HISTCONTROL=erasedups
 
