@@ -64,8 +64,8 @@ if [ -d $HOME/node_modules/.bin ]; then
 fi
 
 # Yarn
-if which yarn &> /dev/null; then
-	export PATH=$PATH:$(yarn global bin)
+if [ -d $HOME/.yarn/bin ]; then
+	export PATH=$PATH:$HOME/.yarn/bin
 fi
 
 # Ruby env
